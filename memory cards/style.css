@@ -1,0 +1,46 @@
+*{
+margin: 0;
+}
+#game{
+    width: 90%;
+    max-width:800px ;
+    margin: auto;
+    font-size: 0;
+}
+#game img{
+    width: calc(100% / 6 - 4px);
+     margin: 2px;
+     border-radius: 15%;
+}
+h1{
+    text-align: center;
+    background-color: black;
+  border-color: black;
+  color: aliceblue;
+  border-radius: 15%;
+  display: inline-block;
+}
+#h1 {
+text-align: center;
+}
+a{
+    margin: auto;
+    left: 50%;
+    right: 50%;
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    border-radius: 15%;
+    text-decoration: none;
+    width: 200px;
+}
+#button{
+    width: 100px;
+}
+body{
+    background-image: url("OIP.jfif");
+    background-size: cover;
+}
+#button{
+    border-radius: 15%;
+    background-image: url(OIP\ \(1\).jfif);
+}
