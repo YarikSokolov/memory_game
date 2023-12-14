@@ -15,12 +15,12 @@ for (let index = 0; index < 12; index++) {
     card_images.push("card (" + index + ").webp")
     card_images.push("card (" + index + ").webp")
 }
-// for (let index = 23; index > 0; index--) {
-//     let randomNum = Math.floor(Math.random() * (index + 1))
-//     let mob = card_images[index]
-//     card_images[index] = card_images[randomNum]
-//     card_images[randomNum] = mob
-// }
+for (let index = 23; index > 0; index--) {
+    let randomNum = Math.floor(Math.random() * (index + 1))
+    let mob = card_images[index]
+    card_images[index] = card_images[randomNum]
+    card_images[randomNum] = mob
+}
 for (let index = 0; index < 24; index++) {
     let card = document.createElement("img")
     card.src = "rubashka.jpg"
@@ -53,6 +53,7 @@ for (let index = 0; index < 24; index++) {
                     for (let index = 0; index < 24; index++) {
                         if (game.children[index].src.includes("rubashka.jpg")) {
                             game.children[index].style.pointerEvents = "auto"
+
                         }
                     }
                     console.log(dieds);
@@ -69,6 +70,22 @@ for (let index = 0; index < 24; index++) {
                 console.log("👏👏👏youLOSE👏👏👏")
             }
         }
+
     }
+
+}
+let button = document.getElementById("button")
+button.onclick=function () {
+    seconds = 0
+    for (let index = 23; index > 0; index--) {
+        let randomNum = Math.floor(Math.random() * (index + 1))
+        let mob = card_images[index]
+        card_images[index] = card_images[randomNum]
+        card_images[randomNum] = mob
+    }
+    for (let index = 0; index < 24; index++) {
+            game.children[index].src="rubashka.jpg"
+            
+        }
 }
 // стили
