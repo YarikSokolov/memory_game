@@ -1,9 +1,11 @@
 let seconds =0 
-setInterval(function(){
-console.log("время");
-seconds++
-time.innerHTML="TimeToLose😋😎 : " + seconds
-},1000)
+let gameInterval
+gameInterval=setInterval(function(){
+    
+    console.log("время");
+    seconds++
+    time.innerHTML="TimeToLose😋😎 : " + seconds 
+    },1000)
 let game = document.getElementById("game")
 let card_images = []
 let open = []
@@ -37,9 +39,10 @@ for (let index = 0; index < 24; index++) {
                 dieds = dieds + 1
            if (dieds==12) {
             title.innerHTML = "you win😥😣😏"
+            clearInterval(gameInterval)
            }
                 console.log(dieds);
-
+                
             }
             else {
                 for (let index = 0; index < 24; index++) {
@@ -77,6 +80,12 @@ for (let index = 0; index < 24; index++) {
 let button = document.getElementById("button")
 button.onclick=function () {
     seconds = 0
+    gameInterval=setInterval(function(){
+    
+        console.log("время");
+        seconds++
+        time.innerHTML="TimeToLose😋😎 : " + seconds 
+        },1000)
     for (let index = 23; index > 0; index--) {
         let randomNum = Math.floor(Math.random() * (index + 1))
         let mob = card_images[index]
